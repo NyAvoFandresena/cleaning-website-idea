@@ -9,11 +9,13 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <Container className="py-24">
-      <h1 className="text-4xl font-bold text-brand-dark mb-8">About Ny Avo Cleaning</h1>
-      <p className="text-lg text-brand-dark/70 max-w-2xl">
-        We are a dedicated team of cleaning professionals based in Antananarivo. 
-        Our mission is to provide top-quality cleaning services that you can trust.
-      </p>
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h1 className=" text-4xl font-bold  mb-8">About Ny Avo Cleaning</h1>
+        <p className="text-lg max-w-2xl">
+          We are a dedicated team of cleaning professionals based in Antananarivo.
+          Our mission is to provide top-quality cleaning services that you can trust.
+        </p>
+      </div>
       {/* TODO: Add more content here */}
     </Container>
   );
