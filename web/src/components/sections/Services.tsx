@@ -29,7 +29,7 @@ export function Services() {
       <Container>
         <div className="text-center mb-16">
           <span className="text-brand-medium font-semibold uppercase tracking-wider text-sm">Our Services</span>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
             Cleaning Solutions for Every Need
           </h2>
         </div>
@@ -41,7 +41,7 @@ export function Services() {
                 <h3 className="text-xl font-bold text-brand-dark mb-2">{service.title}</h3>
                 <p className="text-brand-dark/70 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="text-2xl font-bold text-brand-medium mb-6">{service.price}</div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-brand-dark/80">
@@ -55,13 +55,13 @@ export function Services() {
               </div>
               <div className="p-6 bg-brand-white border-t border-brand-light/10">
                 <Button className="w-full" asChild variant={service.title === "Deep Cleaning" ? "primary" : "outline"}>
-                   <Link href="/contact">Book This Service</Link>
+                  <Link href="/contact">Book This Service</Link>
                 </Button>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
           <Button variant="link" asChild size="lg">
             <Link href="/services">View All Services & Pricing &rarr;</Link>
