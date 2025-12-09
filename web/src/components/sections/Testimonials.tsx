@@ -7,7 +7,7 @@ const testimonials = [
     role: "Homeowner",
   },
   {
-    content: "Ny Avo Cleaning has changed my life. I have so much more free time now, and coming home to a clean house is the best feeling.",
+    content: "Our Cleaning Services has changed my life. I have so much more free time now, and coming home to a clean house is the best feeling.",
     author: "Marc L.",
     role: "Business Owner",
   },
