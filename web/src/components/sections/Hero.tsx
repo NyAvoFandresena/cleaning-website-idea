@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-white pt-16 pb-32 md:pt-24 md:pb-48 lg:pt-32 lg:pb-56">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-light/30 via-brand-white to-transparent" />
-      
+
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div className="flex flex-col justify-center space-y-8">
@@ -15,7 +15,7 @@ export function Hero() {
                 Experience the Joy of a <span className="text-brand-medium">Spotless Home</span>
               </h1>
               <p className="max-w-[600px] text-lg text-brand-dark/70 md:text-xl">
-                Professional, reliable, and friendly cleaning services tailored to your lifestyle. 
+                Professional, reliable, and friendly cleaning services tailored to your lifestyle.
                 Let us handle the mess while you focus on what matters most.
               </p>
             </div>
@@ -27,14 +27,14 @@ export function Hero() {
                 <Link href="/services">View Services</Link>
               </Button>
             </div>
-            
+
             <div className="flex items-center gap-4 text-sm text-brand-dark/60">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                   <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-brand-light flex items-center justify-center text-xs">
-                     {/* User Avatar Placeholder */}
-                     👤
-                   </div>
+                  <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-brand-light flex items-center justify-center text-xs">
+                    {/* User Avatar Placeholder */}
+                    👤
+                  </div>
                 ))}
               </div>
               <p>Trusted by 500+ homeowners</p>
@@ -43,21 +43,19 @@ export function Hero() {
 
           <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
             <div className="relative aspect-square overflow-hidden rounded-2xl bg-brand-light/20 shadow-xl">
-               {/* Hero Image Placeholder */}
-               <div className="absolute inset-0 flex items-center justify-center text-brand-medium/20">
-                 <svg className="w-32 h-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                 </svg>
-               </div>
-               <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur rounded-lg shadow-sm border border-brand-light/20">
-                 <div className="flex items-center gap-3">
-                   <div className="h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">✓</div>
-                   <div>
-                     <p className="font-semibold text-brand-dark">100% Satisfaction</p>
-                     <p className="text-xs text-brand-dark/60">Guaranteed quality service</p>
-                   </div>
-                 </div>
-               </div>
+              {/* Hero Image Placeholder */}
+              <div className="absolute inset-0 flex items-center justify-center text-brand-medium/20">
+                <img src="images/cleaners.png" alt="cleaners" srcset="" />
+              </div>
+              <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur rounded-lg shadow-sm border border-brand-light/20">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">✓</div>
+                  <div>
+                    <p className="font-semibold text-brand-dark">100% Satisfaction</p>
+                    <p className="text-xs text-brand-dark/60">Guaranteed quality service</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
