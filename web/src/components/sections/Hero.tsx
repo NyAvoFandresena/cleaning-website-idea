@@ -12,11 +12,13 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl font-extrabold tracking-tight text-brand-dark sm:text-5xl xl:text-6xl">
-                Experience the Joy of a <span className="text-brand-medium">Spotless Home</span>
+                Experience the Joy of a{" "}
+                <span className="text-brand-medium">Spotless Home</span>
               </h1>
               <p className="max-w-[600px] text-lg text-brand-dark/70 md:text-xl">
-                Professional, reliable, and friendly cleaning services tailored to your lifestyle.
-                Let us handle the mess while you focus on what matters most.
+                Professional, reliable, and friendly cleaning services tailored
+                to your lifestyle. Let us handle the mess while you focus on
+                what matters most.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -31,7 +33,10 @@ export function Hero() {
             <div className="flex items-center gap-4 text-sm text-brand-dark/60">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-brand-light flex items-center justify-center text-xs">
+                  <div
+                    key={i}
+                    className="h-8 w-8 rounded-full border-2 border-white bg-brand-light flex items-center justify-center text-xs"
+                  >
                     {/* User Avatar Placeholder */}
                     👤
                   </div>
@@ -45,14 +50,24 @@ export function Hero() {
             <div className="relative aspect-square overflow-hidden rounded-2xl bg-brand-light/20 shadow-xl">
               {/* Hero Image Placeholder */}
               <div className="absolute inset-0 flex items-center justify-center text-brand-medium/20">
-                <img src="images/cleaners.png" alt="cleaners" srcset="" />
+                <img
+                  src="/web/public/images/cleaners.png"
+                  alt="cleaners"
+                  srcset=""
+                />
               </div>
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur rounded-lg shadow-sm border border-brand-light/20">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">✓</div>
+                  <div className="h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                    ✓
+                  </div>
                   <div>
-                    <p className="font-semibold text-brand-dark">100% Satisfaction</p>
-                    <p className="text-xs text-brand-dark/60">Guaranteed quality service</p>
+                    <p className="font-semibold text-brand-dark">
+                      100% Satisfaction
+                    </p>
+                    <p className="text-xs text-brand-dark/60">
+                      Guaranteed quality service
+                    </p>
                   </div>
                 </div>
               </div>
