@@ -6,7 +6,6 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-white pt-16 pb-32 md:pt-24 md:pb-48 lg:pt-32 lg:pb-56">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-light/30 via-brand-white to-transparent" />
-
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div className="flex flex-col justify-center space-y-8">
