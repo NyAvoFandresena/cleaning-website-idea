@@ -50,11 +50,7 @@ export function Hero() {
             <div className="relative aspect-square overflow-hidden rounded-2xl bg-brand-light/20 shadow-xl">
               {/* Hero Image Placeholder */}
               <div className="absolute inset-0 flex items-center justify-center text-brand-medium/20">
-                <img
-                  src="/web/public/images/cleaners.png"
-                  alt="cleaners"
-                  srcset=""
-                />
+                <img src="images/cleaners.png" alt="cleaners" srcset="" />
               </div>
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur rounded-lg shadow-sm border border-brand-light/20">
                 <div className="flex items-center gap-3">
