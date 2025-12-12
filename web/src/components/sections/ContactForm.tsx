@@ -20,13 +20,20 @@ export function ContactForm() {
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto p-8 bg-white rounded-2xl shadow-sm border border-brand-light/20">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6 max-w-xl mx-auto p-8 bg-white rounded-2xl shadow-sm border border-brand-light/20"
+    >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-brand-dark">
@@ -39,11 +46,14 @@ export function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="John Doe"
-            className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent"
+            className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm text-brand-dark placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent"
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="phone" className="text-sm font-medium text-brand-dark">
+          <label
+            htmlFor="phone"
+            className="text-sm font-medium text-brand-dark"
+          >
             Phone Number
           </label>
           <input
@@ -54,7 +64,7 @@ export function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="+261 34 ..."
-            className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent"
+            className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm text-brand-dark placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent"
           />
         </div>
       </div>
@@ -71,12 +81,15 @@ export function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="john@example.com"
-          className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent"
+          className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm text-brand-dark placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="service" className="text-sm font-medium text-brand-dark">
+        <label
+          htmlFor="service"
+          className="text-sm font-medium text-brand-dark"
+        >
           Service Type
         </label>
         <div className="relative">
@@ -88,22 +101,37 @@ export function ContactForm() {
             onChange={handleChange}
             className="w-full h-10 px-3 rounded-md border border-brand-light/30 bg-transparent text-sm text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent appearance-none"
           >
-            <option value="" disabled>Select a service</option>
+            <option value="" disabled>
+              Select a service
+            </option>
             <option value="regular">Regular Maintenance</option>
             <option value="deep">Deep Cleaning</option>
             <option value="move">Move-In / Move-Out</option>
             <option value="other">Other</option>
           </select>
           <div className="absolute right-3 top-3 pointer-events-none">
-            <svg className="w-4 h-4 text-brand-dark/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <svg
+              className="w-4 h-4 text-brand-dark/50"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </div>
         </div>
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-sm font-medium text-brand-dark">
+        <label
+          htmlFor="message"
+          className="text-sm font-medium text-brand-dark"
+        >
           Message / Special Requests
         </label>
         <textarea
@@ -113,7 +141,7 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Tell us about your home (size, specific needs)..."
-          className="w-full p-3 rounded-md border border-brand-light/30 bg-transparent text-sm placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent resize-none"
+          className="w-full p-3 rounded-md border border-brand-light/30 bg-transparent text-sm text-brand-dark placeholder:text-brand-dark/40 focus:outline-none focus:ring-2 focus:ring-brand-medium focus:border-transparent resize-none"
         />
       </div>
 
