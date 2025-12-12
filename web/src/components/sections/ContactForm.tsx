@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,38 @@ export function ContactForm() {
     console.log("Form submitted:", formData);
     alert("Thank you for your request! We will contact you shortly.");
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    emailjs
+      .send(
+        "service_yecx2nj",
+        "template_2435k9y",
+        {
+          title: "New Contact Form Submission",
+          name: formData.name,
+          time: new Date().toLocaleString(),
+          message: formData.message,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          to_email: "hnafdsn380095@gmail.com",
+        },
+        "q82fgki41ySSPbrda"
+      )
+      .then(
+        () => {
+          alert("Email sent! We will contact you shortly.");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert("Something went wrong. Try again.");
+        }
+      );
   };
 
   const handleChange = (
