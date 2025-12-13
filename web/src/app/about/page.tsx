@@ -19,7 +19,7 @@ export default function AboutPage() {
         </p>
         {/* 1. HERO SECTION */}
         {/* Visual goal: Professionalism. Background should be a clean, high-res image of the team or a sparkling room. */}
-        <section className="relative w-full py-24 md:py-32 bg-brand-dark flex items-center justify-center overflow-hidden">
+        <section className="relative w-full py-0 md:py-32 bg-brand-dark flex items-center justify-center overflow-hidden">
           {/* Abstract shapes or image overlay */}
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-medium to-brand-dark"></div>
 
@@ -36,10 +36,10 @@ export default function AboutPage() {
         </section>
 
         {/* 2. OUR STORY / MISSION */}
-        <section className="py-16 md:py-24 px-4 md:px-8 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+        <section className=" md:py-24 px-4 md:px-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-3 py-1 bg-brand-light/30 text-brand-medium text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+              <div className="inline-block px-3 py-3 bg-brand-light/30 text-brand-medium text-xs font-bold uppercase tracking-wider rounded-full mb-4">
                 Our Mission
               </div>
               <h2 className="text-3xl font-bold mb-6 text-brand-dark">
@@ -67,23 +67,15 @@ export default function AboutPage() {
               </div>
             </div>
             {/* Image Placeholder: Represents a supervisor checking work or a happy team */}
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl bg-slate-200 group">
+            <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl bg-stale-200 group">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 bg-slate-100">
-                <svg
-                  className="w-16 h-16 mb-4 text-brand-medium/50"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"
-                  ></path>
-                </svg>
                 <span className="font-medium text-sm">
-                  Image: Team or Supervisor
+                  <img
+                    className="w-full "
+                    src="images/manager.png"
+                    alt=""
+                    srcset=""
+                  />
                 </span>
               </div>
             </div>

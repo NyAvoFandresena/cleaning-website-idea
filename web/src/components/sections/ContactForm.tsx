@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
@@ -13,12 +13,24 @@ export function ContactForm() {
     message: "",
   });
 
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (successMessage || errorMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage(null);
+        setErrorMessage(null);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage, errorMessage]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder for form submission logic
     console.log("Form submitted:", formData);
-    alert("Thank you for your request! We will contact you shortly.");
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setIsSubmitting(true);
     emailjs
       .send(
         "service_yecx2nj",
@@ -37,7 +49,9 @@ export function ContactForm() {
       )
       .then(
         () => {
-          alert("Email sent! We will contact you shortly.");
+          setSuccessMessage(
+            "Thank you, your message was sent. We'll contact you shortly."
+          );
           setFormData({
             name: "",
             email: "",
@@ -45,10 +59,12 @@ export function ContactForm() {
             service: "",
             message: "",
           });
+          setIsSubmitting(false);
         },
         (error) => {
           console.error("EmailJS Error:", error);
-          alert("Something went wrong. Try again.");
+          setErrorMessage("Something went wrong. Try again.");
+          setIsSubmitting(false);
         }
       );
   };
@@ -67,6 +83,24 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       className="space-y-6 max-w-xl mx-auto p-8 bg-white rounded-2xl shadow-sm border border-brand-light/20"
     >
+      {successMessage && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="p-3 bg-green-50 border border-green-200 text-green-700 rounded-md"
+        >
+          {successMessage}
+        </div>
+      )}
+      {errorMessage && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-md"
+        >
+          {errorMessage}
+        </div>
+      )}
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-brand-dark">
@@ -178,8 +212,13 @@ export function ContactForm() {
         />
       </div>
 
-      <Button type="submit" className="w-full" size="lg">
-        Request Quote
+      <Button
+        type="submit"
+        className="w-full"
+        size="lg"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Sending..." : "Request Quote"}
       </Button>
     </form>
   );
