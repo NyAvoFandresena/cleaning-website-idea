@@ -238,7 +238,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/booking"
+              href="/contact"
               className="bg-brand-dark text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-900 transition shadow-lg"
             >
               Book Now
