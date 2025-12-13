@@ -65,7 +65,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-24 bg-brand-white">
+    <section className="py-5 bg-brand-white">
       <Container>
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">
