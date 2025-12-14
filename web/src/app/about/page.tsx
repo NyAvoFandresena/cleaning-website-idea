@@ -51,12 +51,7 @@ export default function AboutPage() {
             <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl bg-stale-200 group">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 bg-slate-100">
                 <span className="font-medium text-sm">
-                  <img
-                    className="w-full "
-                    src="images/manager.png"
-                    alt=""
-                    srcset=""
-                  />
+                  <img className="w-full " src="images/manager.png" alt="" />
                 </span>
               </div>
             </div>
